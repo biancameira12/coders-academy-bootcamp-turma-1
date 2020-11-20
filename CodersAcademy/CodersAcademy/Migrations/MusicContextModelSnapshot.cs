@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace CodersAcademy.API.Migrations
+namespace CodersAcademy.Migrations
 {
     [DbContext(typeof(MusicContext))]
     partial class MusicContextModelSnapshot : ModelSnapshot
@@ -16,7 +16,7 @@ namespace CodersAcademy.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("CodersAcademy.API.Model.Album", b =>
+            modelBuilder.Entity("CodersAcademy.Controllers.Model.Album", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace CodersAcademy.API.Migrations
                     b.ToTable("Albuns");
                 });
 
-            modelBuilder.Entity("CodersAcademy.API.Model.Music", b =>
+            modelBuilder.Entity("CodersAcademy.Controllers.Model.Music", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,9 +70,9 @@ namespace CodersAcademy.API.Migrations
                     b.ToTable("Music");
                 });
 
-            modelBuilder.Entity("CodersAcademy.API.Model.Music", b =>
+            modelBuilder.Entity("CodersAcademy.Controllers.Model.Music", b =>
                 {
-                    b.HasOne("CodersAcademy.API.Model.Album", "Album")
+                    b.HasOne("CodersAcademy.Controllers.Model.Album", "Album")
                         .WithMany("Musics")
                         .HasForeignKey("AlbumId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -80,7 +80,7 @@ namespace CodersAcademy.API.Migrations
                     b.Navigation("Album");
                 });
 
-            modelBuilder.Entity("CodersAcademy.API.Model.Album", b =>
+            modelBuilder.Entity("CodersAcademy.Controllers.Model.Album", b =>
                 {
                     b.Navigation("Musics");
                 });

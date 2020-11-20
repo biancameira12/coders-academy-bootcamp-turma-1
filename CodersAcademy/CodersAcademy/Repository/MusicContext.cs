@@ -1,5 +1,5 @@
-﻿using CodersAcademy.API.Model;
-using CodersAcademy.API.Repository.Mapping;
+﻿using CodersAcademy.API.Repository.Mapping;
+using CodersAcademy.Controllers.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace CodersAcademy.API.Repository
     {
         public DbSet<Album> Albums { get; set; }
 
-        public MusicContext(DbContextOptions<MusicContext> options): base(options)
+        public MusicContext(DbContextOptions<MusicContext> options) : base(options)
         {
 
         }

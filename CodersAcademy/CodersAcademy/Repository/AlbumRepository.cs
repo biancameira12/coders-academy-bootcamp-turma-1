@@ -1,4 +1,4 @@
-﻿using CodersAcademy.API.Model;
+﻿using CodersAcademy.Controllers.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

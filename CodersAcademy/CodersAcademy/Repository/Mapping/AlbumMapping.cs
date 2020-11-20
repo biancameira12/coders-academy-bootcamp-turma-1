@@ -1,4 +1,5 @@
-﻿using CodersAcademy.API.Model;
+﻿using CodersAcademy.API;
+using CodersAcademy.Controllers.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
